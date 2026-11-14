@@ -1,0 +1,90 @@
+.circulo1{
+  background-color:#9158e0;
+  width:70px;
+  height:70px;
+border-radius: 50%;
+position: relative;
+top: 50px;
+left: 80px;
+animation-name: circulo1;
+animation-duration: 6s;
+animation-iteration-count: infinite;
+}
+
+@keyframes  circulo1{
+  0%{
+    background-color: #9158e0;
+  }
+  50%{
+    background-color: #65cfdb;
+    top: 200px;
+    left: 700px;
+  } 
+  100%{
+    background-color: #db65d1;
+    top: 600px;
+    left: 70px;
+  }
+}
+.circulo2{
+  background-color:#b4db65;
+  width:20px;
+  height:20px;
+border-radius: 50%;
+position: relative;
+top: 50px;
+left: 80px;
+animation-name: circulo2;
+animation-duration: 8s;
+animation-iteration-count: infinite;
+}
+
+@keyframes  circulo2{
+  0%{
+    background-color: #b4db65;
+  }
+  50%{
+    background-color: #f3fa37;
+    top: 200px;
+    left: 700px;
+  }
+  100%{
+    background-color: #ed0d09;
+    top: 600px;
+    left: 70px;
+  }
+}
+/* Contenedor de la tira */
+.tira-animada {
+    width: 100%;              /* Ocupa todo el ancho disponible */
+    overflow: hidden;         /* Oculta el texto que sale de la tira */
+    background-color: #000;   /* Color de fondo de la tira */
+    padding: 15px 0;          /* Espacio arriba y abajo */
+    white-space: nowrap;      /* Evita que el texto salte de línea */
+}
+
+/* Texto que se mueve */
+.texto-movimiento {
+    display: inline-block;    /* Permite aplicar la animación */
+    color: pink;              /* Color blanco del texto */
+    font-size: 28px;          /* Tamaño de la letra */
+    font-weight: bold;        /* Texto en negrita */
+    letter-spacing: 3px;      /* Espacio entre letras */
+
+    /* Nombre, duración y repetición de la animación */
+    animation: moverTexto 15s linear infinite;
+}
+
+/* Animación de desplazamiento */
+@keyframes moverTexto {
+
+    /* El texto comienza fuera del lado derecho */
+    from {
+        transform: translateX(60%);
+    }
+
+    /* El texto termina saliendo por el lado izquierdo */
+    to {
+        transform: translateX(-100%);
+    }
+}
